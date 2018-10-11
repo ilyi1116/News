@@ -26,6 +26,10 @@ class DQTabBarVC: UITabBarController {
         setupChildViewController(childVC: DQVideoVC(), title: "视频", imageName: "video_tabbar_32x32_", selectImageName: "video_tabbar_press_32x32_")
         setupChildViewController(childVC: DQHuoshanVC(), title: "小视频", imageName: "huoshan_tabbar_32x32_", selectImageName: "huoshan_tabbar_press_32x32_")
         setupChildViewController(childVC: DQMineVC(), title: "我的", imageName: "mine_tabbar_32x32_", selectImageName: "mine_tabbar_press_32x32_")
+        
+        // 通过kvc的方式来设置tabbar
+        // tabbar是readonly 属性，不能直接修改，利用kvc把readonly属性的权限改过来
+        setValue(DQTabBar(), forKey: "tabBar")
     }
     
     //设置子控制器
@@ -33,7 +37,7 @@ class DQTabBarVC: UITabBarController {
         //设置 tabbar 的文字和图片
         childVC.tabBarItem.image = UIImage(named: imageName)
         childVC.tabBarItem.selectedImage = UIImage(named: selectImageName)
-        childVC.tabBarItem.title = title
+        childVC.title = title
         //添加导航控制器为tabbarVC的子控制器
         let navVC = DQNavigationVC(rootViewController: childVC)
         addChildViewController(navVC)
