@@ -13,6 +13,8 @@
 		AD7C5DD9216F42EB00FC9B43 /* DQHuoshanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DCB216F42EB00FC9B43 /* DQHuoshanVC.swift */; };
 		AD7C5DDA216F42EB00FC9B43 /* DQMineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DD0216F42EB00FC9B43 /* DQMineVC.swift */; };
 		AD7C5DDB216F42EB00FC9B43 /* DQVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DD5216F42EB00FC9B43 /* DQVideoVC.swift */; };
+		AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DDD216F4C7600FC9B43 /* Const.swift */; };
+		AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DE0216F4E2F00FC9B43 /* UIColor+Extension.swift */; };
 		ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB353B216DCE7000CA492B /* AppDelegate.swift */; };
 		ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBB353F216DCE7000CA492B /* Main.storyboard */; };
 		ADBB3543216DCE7B00CA492B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBB3542216DCE7B00CA492B /* Assets.xcassets */; };
@@ -48,6 +50,8 @@
 		AD7C5DCB216F42EB00FC9B43 /* DQHuoshanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQHuoshanVC.swift; sourceTree = "<group>"; };
 		AD7C5DD0216F42EB00FC9B43 /* DQMineVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQMineVC.swift; sourceTree = "<group>"; };
 		AD7C5DD5216F42EB00FC9B43 /* DQVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQVideoVC.swift; sourceTree = "<group>"; };
+		AD7C5DDD216F4C7600FC9B43 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		AD7C5DE0216F4E2F00FC9B43 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		ADBB3538216DCE7000CA492B /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBB353B216DCE7000CA492B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBB3540216DCE7000CA492B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -238,6 +242,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		AD7C5DDC216F4C6200FC9B43 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C5DDD216F4C7600FC9B43 /* Const.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		AD7C5DDF216F4D1E00FC9B43 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C5DE0216F4E2F00FC9B43 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		ADBB352F216DCE7000CA492B = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +288,8 @@
 				ADBB356B216DD0A900CA492B /* DQNavigationVC.swift */,
 				AD7C5DC1216F3BB100FC9B43 /* DQTabBar.swift */,
 				AD7C5DC3216F42EB00FC9B43 /* Classes */,
+				AD7C5DDC216F4C6200FC9B43 /* Other */,
+				AD7C5DDF216F4D1E00FC9B43 /* Extension */,
 				ADBB353F216DCE7000CA492B /* Main.storyboard */,
 				ADBB3542216DCE7B00CA492B /* Assets.xcassets */,
 				ADBB3544216DCE7B00CA492B /* LaunchScreen.storyboard */,
@@ -523,6 +545,8 @@
 				ADBB356A216DD07F00CA492B /* DQTabBarVC.swift in Sources */,
 				ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */,
 				AD7C5DDB216F42EB00FC9B43 /* DQVideoVC.swift in Sources */,
+				AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */,
+				AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
