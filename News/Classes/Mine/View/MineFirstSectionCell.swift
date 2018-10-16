@@ -13,18 +13,29 @@ class MineFirstSectionCell: UITableViewCell,RegisterCellOrNib {
     
     /// 标题
     @IBOutlet weak var lblTitle: UILabel!
-    
     /// 图片
     @IBOutlet weak var imgView: UIImageView!
-    
     /// 副标题
     @IBOutlet weak var lblsubTitle: UILabel!
-    
+    /// collectionView
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var followModels = [MyfollowModel]()
+    // 有多少个关注用户
+    var followModels = [MyfollowModel]() {
+        didSet {
+            // 刷新数据
+            collectionView.reloadData()
+        }
+    }
     
     var mycellModel: MyCellModel? {
+        didSet {
+            lblTitle.text = mycellModel?.text
+            lblsubTitle.text = mycellModel?.grey_text
+        }
+    }
+    
+    var myfollowModel: MyfollowModel? {
         didSet {
             
         }
@@ -38,6 +49,7 @@ class MineFirstSectionCell: UITableViewCell,RegisterCellOrNib {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.aj_registerCell(cell: MyfollowCollectionCell.self)
+        collectionView.showsHorizontalScrollIndicator = false
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -66,12 +78,12 @@ class myCollectionViewLayout: UICollectionViewFlowLayout {
 // 实现uicollectionview的代理方法和数据源方法
 extension MineFirstSectionCell: UICollectionViewDataSource,UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return followModels.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.aj_dequeueReusableCell(indexPath: indexPath) as MyfollowCollectionCell
-        
+        cell.followModel = followModels[indexPath.item]
         return cell
     }
 }

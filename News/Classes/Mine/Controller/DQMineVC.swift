@@ -12,7 +12,7 @@ class DQMineVC: UITableViewController {
     
     // 声明一个数组来接收数据
     var sectionArray = [[MyCellModel]]() // 注意 这个数组不能定义为可选类型 否则下面的数据源方法就会崩掉
-    var followModels = [[MyfollowModel]]()
+    var followModels = [MyfollowModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,9 +74,18 @@ extension DQMineVC{
             cell.selectionStyle = .none
             // 取出数组里面的数据
             let section = sectionArray[indexPath.section]
-            let followModel = section[indexPath.row]
-            cell.lblTitle.text = followModel.text
-            cell.lblsubTitle.text = followModel.grey_text
+            let mycellModel = section[indexPath.row]
+            cell.mycellModel = mycellModel
+            
+            if followModels.count == 0 || followModels.count == 1 {
+                cell.collectionView.isHidden = true
+            }
+            if followModels.count == 1 {
+                cell.myfollowModel = followModels[0]
+            }
+            if followModels.count > 1 {
+                cell.followModels = followModels
+            }
             return cell
         }
         

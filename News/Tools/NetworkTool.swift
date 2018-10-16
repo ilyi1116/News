@@ -17,7 +17,7 @@ protocol NetworkToolProtocol {
     // 我的界面 cell 的数据
     static func loadMycellData(completionHandler: @escaping (_ sections: [[MyCellModel]]) -> ())
     // 我的关注
-    static func loadMyFollows(completionHandler: @escaping (_ sections: [[MyfollowModel]]) -> ())
+    static func loadMyFollows(completionHandler: @escaping (_ sections: [MyfollowModel]) -> ())
 }
 
 extension NetworkToolProtocol {
@@ -55,7 +55,7 @@ extension NetworkToolProtocol {
         }
     }
     
-    static func loadMyFollows(completionHandler: @escaping (_ sections: [[MyfollowModel]]) -> ()){
+    static func loadMyFollows(completionHandler: @escaping (_ sections: [MyfollowModel]) -> ()){
         let url = MyfollowUrl
         let params = ["device_id":deviceId]
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseJSON { (response) in
@@ -75,7 +75,7 @@ extension NetworkToolProtocol {
                         let myfollowModel = MyfollowModel.deserialize(from: data as? NSDictionary)
                         followModels.append(myfollowModel!)
                     }
-                    completionHandler([followModels])
+                    completionHandler(followModels)
                 }
             }
         }
