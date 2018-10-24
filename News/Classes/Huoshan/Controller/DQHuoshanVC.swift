@@ -16,6 +16,6 @@ class DQHuoshanVC: UIViewController {
         self.view.backgroundColor = UIColor.white
     }
 
-  
+    
 
 }

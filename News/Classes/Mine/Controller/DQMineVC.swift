@@ -13,6 +13,22 @@ class DQMineVC: UITableViewController {
     // 声明一个数组来接收数据
     var sectionArray = [[MyCellModel]]() // 注意 这个数组不能定义为可选类型 否则下面的数据源方法就会崩掉
     var followModels = [MyfollowModel]()
+    
+    // 隐藏导航栏
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    // 设置状态栏高亮显示
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +39,8 @@ class DQMineVC: UITableViewController {
         tableView.backgroundColor = UIColor.globalBackgroundColor()
         // 去掉tableview的分割线
         tableView.separatorStyle = .none
+        // 设置头部
+        tableView.tableHeaderView = headerView
         // 注册MineCell
         tableView.aj_registerCell(cell: MineCell.self)
         
@@ -50,6 +68,11 @@ class DQMineVC: UITableViewController {
             }
         }
     }
+    
+    fileprivate lazy var headerView: NoLoginHeaderView = {
+        let headerView = NoLoginHeaderView.headerView()
+        return headerView
+    }()
 
 }
 
@@ -122,5 +145,13 @@ extension DQMineVC{
         return view
     }
 
-    
+    // 向下拉头部 黏住顶部
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < 0 { // 表示向下拉
+            let totalOffset = kMineHeaderViewHeight + abs(offsetY)
+            let f = totalOffset / kMineHeaderViewHeight
+            headerView.imgBG.frame = CGRect(x: -SCREEN_WIDTH * (f-1) * 0.5, y: offsetY, width: SCREEN_WIDTH*f, height: totalOffset)
+        }
+    }
 }

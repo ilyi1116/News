@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_profile_night" translatesAutoresizingMaskIntoConstraints="NO" id="Its-hb-GWq">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+                    <rect key="frame" x="0.0" y="-20" width="375" height="280"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hun-PL-Ei1">
                     <rect key="frame" x="0.0" y="190" width="375" height="70"/>
@@ -64,7 +64,7 @@
                         <constraint firstAttribute="trailing" secondItem="3ry-23-WAb" secondAttribute="trailing" id="xAw-S9-xaf"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-EQ-HCc" customClass="AnimatableButton" customModule="IBAnimatable">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cj-EQ-HCc">
                     <rect key="frame" x="124.5" y="142" width="125" height="28"/>
                     <color key="backgroundColor" white="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -108,7 +108,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Its-hb-GWq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="3WL-M5-I3u"/>
+                <constraint firstItem="Its-hb-GWq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-20" id="3WL-M5-I3u"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hun-PL-Ei1" secondAttribute="bottom" id="5dm-k4-z7H"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Its-hb-GWq" secondAttribute="bottom" id="5qp-HP-fOi"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Its-hb-GWq" secondAttribute="trailing" id="9QB-M9-1xR"/>
@@ -124,6 +124,17 @@
             <nil key="simulatedTopBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnCollect" destination="ik9-zi-6aa" id="Byd-xm-hpu"/>
+                <outlet property="btnDayorNight" destination="3ry-23-WAb" id="4Qv-xN-nTs"/>
+                <outlet property="btnHistory" destination="rif-Nm-Syz" id="C6o-56-KVl"/>
+                <outlet property="btnMore" destination="3cj-EQ-HCc" id="yfx-Ha-mrn"/>
+                <outlet property="btnPhone" destination="XmW-sH-eX8" id="MG6-SL-vtk"/>
+                <outlet property="btnQQ" destination="0kl-xj-cZB" id="pYH-gP-ZtZ"/>
+                <outlet property="btnSina" destination="19X-Qo-EIX" id="Rlb-o1-eP5"/>
+                <outlet property="btnWechat" destination="SWS-Tz-1K7" id="yhz-9D-9MG"/>
+                <outlet property="imgBG" destination="Its-hb-GWq" id="qSr-TZ-YWs"/>
+            </connections>
             <point key="canvasLocation" x="-155" y="66"/>
         </view>
     </objects>

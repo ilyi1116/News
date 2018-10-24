@@ -11,4 +11,6 @@ import UIKit
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 
+// 我的页面头部高度
+let kMineHeaderViewHeight: CGFloat = 280
 
