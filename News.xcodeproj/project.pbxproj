@@ -29,6 +29,9 @@
 		AD7C5DDB216F42EB00FC9B43 /* DQVideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DD5216F42EB00FC9B43 /* DQVideoVC.swift */; };
 		AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DDD216F4C7600FC9B43 /* Const.swift */; };
 		AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C5DE0216F4E2F00FC9B43 /* UIColor+Extension.swift */; };
+		AD8C81BD21800E44009C3756 /* ThemeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C81BC21800E44009C3756 /* ThemeTool.swift */; };
+		AD8C81BF21800F27009C3756 /* DefaultTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8C81BE21800F27009C3756 /* DefaultTheme.plist */; };
+		AD8C81C121800F38009C3756 /* NightTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8C81C021800F38009C3756 /* NightTheme.plist */; };
 		ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB353B216DCE7000CA492B /* AppDelegate.swift */; };
 		ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBB353F216DCE7000CA492B /* Main.storyboard */; };
 		ADBB3543216DCE7B00CA492B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBB3542216DCE7B00CA492B /* Assets.xcassets */; };
@@ -80,6 +83,9 @@
 		AD7C5DD5216F42EB00FC9B43 /* DQVideoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DQVideoVC.swift; sourceTree = "<group>"; };
 		AD7C5DDD216F4C7600FC9B43 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		AD7C5DE0216F4E2F00FC9B43 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AD8C81BC21800E44009C3756 /* ThemeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTool.swift; sourceTree = "<group>"; };
+		AD8C81BE21800F27009C3756 /* DefaultTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DefaultTheme.plist; sourceTree = "<group>"; };
+		AD8C81C021800F38009C3756 /* NightTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NightTheme.plist; sourceTree = "<group>"; };
 		ADBB3538216DCE7000CA492B /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBB353B216DCE7000CA492B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBB3540216DCE7000CA492B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7A56A921708F4600F08FD5 /* NetworkTool.swift */,
+				AD8C81BC21800E44009C3756 /* ThemeTool.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 				ADBB3542216DCE7B00CA492B /* Assets.xcassets */,
 				ADBB3544216DCE7B00CA492B /* LaunchScreen.storyboard */,
 				ADBB3547216DCE7B00CA492B /* Info.plist */,
+				AD8C81BE21800F27009C3756 /* DefaultTheme.plist */,
+				AD8C81C021800F38009C3756 /* NightTheme.plist */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -485,6 +494,8 @@
 				ADBB3546216DCE7B00CA492B /* LaunchScreen.storyboard in Resources */,
 				ADBB3543216DCE7B00CA492B /* Assets.xcassets in Resources */,
 				AD6A1D5B21743BAF009D8E35 /* MineCell.xib in Resources */,
+				AD8C81C121800F38009C3756 /* NightTheme.plist in Resources */,
+				AD8C81BF21800F27009C3756 /* DefaultTheme.plist in Resources */,
 				AD6A1D5F217467C6009D8E35 /* MineFirstSectionCell.xib in Resources */,
 				ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */,
 				AD2413012175D539002A37C3 /* NoLoginHeaderView.xib in Resources */,
@@ -611,6 +622,7 @@
 				AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */,
 				AD6A1D5521742766009D8E35 /* API.swift in Sources */,
 				AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */,
+				AD8C81BD21800E44009C3756 /* ThemeTool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,6 +20,10 @@ class MineFirstSectionCell: UITableViewCell,RegisterCellOrNib {
     /// collectionView
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var imgArrow: UIImageView!
+    
+    @IBOutlet weak var topView: UIView!
+    
     // 有多少个关注用户
     var followModels = [MyfollowModel]() {
         didSet {
@@ -50,6 +54,14 @@ class MineFirstSectionCell: UITableViewCell,RegisterCellOrNib {
         collectionView.dataSource = self
         collectionView.aj_registerCell(cell: MyfollowCollectionCell.self)
         collectionView.showsHorizontalScrollIndicator = false
+        
+        // 设置主题
+        lblTitle.theme_textColor = "colors.black"
+        lblTitle.theme_backgroundColor = "colors.cellBackgroundColor"
+        imgArrow.theme_image = "images.imgCellRightArrow"
+        topView.theme_backgroundColor = "colors.cellBackgroundColor"
+        collectionView.theme_backgroundColor = "colors.cellBackgroundColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

@@ -14,3 +14,5 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.height
 // 我的页面头部高度
 let kMineHeaderViewHeight: CGFloat = 280
 
+let isNight = "isNight"
+

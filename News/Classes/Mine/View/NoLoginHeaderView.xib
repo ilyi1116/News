@@ -37,6 +37,9 @@
                             <state key="normal" title="夜间" image="nighticon_profile_24x24_">
                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="btnDayOrNight_Click:" destination="iN0-l3-epB" eventType="touchUpInside" id="Dyq-WE-XmS"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rif-Nm-Syz">
                             <rect key="frame" x="125" y="0.0" width="125" height="70"/>
@@ -134,6 +137,7 @@
                 <outlet property="btnSina" destination="19X-Qo-EIX" id="Rlb-o1-eP5"/>
                 <outlet property="btnWechat" destination="SWS-Tz-1K7" id="yhz-9D-9MG"/>
                 <outlet property="imgBG" destination="Its-hb-GWq" id="qSr-TZ-YWs"/>
+                <outlet property="viewBottom" destination="Hun-PL-Ei1" id="SIO-Za-QGl"/>
             </connections>
             <point key="canvasLocation" x="-155" y="66"/>
         </view>

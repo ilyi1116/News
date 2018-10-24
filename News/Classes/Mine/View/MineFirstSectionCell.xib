@@ -99,9 +99,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="collectionView" destination="VHF-hJ-1zF" id="j04-tC-has"/>
+                <outlet property="imgArrow" destination="ac8-tV-hcr" id="aax-A2-aVh"/>
                 <outlet property="imgView" destination="bq6-kb-ExE" id="pg4-GI-ADF"/>
                 <outlet property="lblTitle" destination="v54-Xi-Aj3" id="wgX-UL-J78"/>
                 <outlet property="lblsubTitle" destination="jBe-vb-icl" id="hfu-NM-CeO"/>
+                <outlet property="topView" destination="QWd-5y-BEX" id="hdG-tQ-vYx"/>
             </connections>
             <point key="canvasLocation" x="-117" y="-11.5"/>
         </tableViewCell>

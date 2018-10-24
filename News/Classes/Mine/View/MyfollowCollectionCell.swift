@@ -42,6 +42,10 @@ class MyfollowCollectionCell: UICollectionViewCell,RegisterCellOrNib {
         
         btnTip.layer.borderWidth = 1
         btnTip.layer.borderColor = UIColor.white.cgColor
+        
+        // 设置主题
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        lblTitle.theme_textColor = "colors.black"
     }
 
 }

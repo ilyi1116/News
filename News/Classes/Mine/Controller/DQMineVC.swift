@@ -127,7 +127,7 @@ extension DQMineVC{
     
     // 设置组的高度
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return section == 0 ? 0 : 10;
+        return section == 0 ? 0 : 0;
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

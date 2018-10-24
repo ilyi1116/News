@@ -63,8 +63,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="imgArrow" destination="5WV-9M-epG" id="4ha-bO-dMm"/>
                 <outlet property="lblTitle" destination="bow-14-aNM" id="lya-cj-MHh"/>
                 <outlet property="lblsubTitle" destination="8xt-eq-LS2" id="KwS-se-GvW"/>
+                <outlet property="lineView" destination="rI6-FO-Bvl" id="Dcn-ej-Vqy"/>
             </connections>
             <point key="canvasLocation" x="-71" y="-20"/>
         </tableViewCell>
