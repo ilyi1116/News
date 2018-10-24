@@ -16,3 +16,6 @@ let kMineHeaderViewHeight: CGFloat = 280
 
 let isNight = "isNight"
 
+// 通知名称
+let DayOrNightButtonClicked = "DayOrNightButtonClicked"
+

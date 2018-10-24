@@ -15,6 +15,10 @@ class DQTabBar: UITabBar {
         
         //添加
         addSubview(publishBtn)
+        
+        // 设置tabbar的 tintColor
+        theme_tintColor = "colors.tabbarTintColor"
+        theme_barTintColor = "colors.cellBackgroundColor"
     }
     
     // 使用懒加载的方式 创建button
@@ -26,8 +30,9 @@ class DQTabBar: UITabBar {
      */
     private lazy var publishBtn: UIButton = {
         let publishBtn = UIButton(type: .custom)
-        publishBtn.setBackgroundImage(UIImage(named: "feed_publish_44x44_"), for: .normal)
-        publishBtn.setBackgroundImage(UIImage(named: "feed_publish_press_44x44_"), for: .selected)
+        // 设置发布按钮的主题
+        publishBtn.theme_setBackgroundImage("images.imgPublishBtn", forState: .normal)
+        publishBtn.theme_setBackgroundImage("images.imgPublishBtnSelected", forState: .selected)
         publishBtn.sizeToFit()
         return publishBtn
     }()

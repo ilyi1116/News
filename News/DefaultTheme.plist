@@ -20,6 +20,10 @@
 		<string>nighticon_profile_24x24_</string>
 		<key>imgCellRightArrow</key>
 		<string>setting_rightarrow_8x14_</string>
+		<key>imgPublishBtn</key>
+		<string>feed_publish_44x44_</string>
+		<key>imgPublishBtnSelected</key>
+		<string>feed_publish_press_44x44_</string>
 	</dict>
 	<key>colors</key>
 	<dict>
@@ -35,6 +39,8 @@
 		<string>#aaaaaa</string>
 		<key>separatorColor</key>
 		<string>#f0f0f0</string>
+		<key>tabbarTintColor</key>
+		<string>#f55a5d</string>
 	</dict>
 </dict>
 </plist>

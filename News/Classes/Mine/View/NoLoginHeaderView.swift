@@ -61,7 +61,11 @@ class NoLoginHeaderView: UIView {
         sender.isSelected = !sender.isSelected
         // 点击之后保存按钮的选中状态
         UserDefaults.standard.set(sender.isSelected, forKey: isNight)
+        
         ThemeTool.switchNight(sender.isSelected)
+        
+        // 改变tabbar的主题颜色 点击按钮发送通知
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: DayOrNightButtonClicked), object: sender.isSelected)
     }
     
 }
