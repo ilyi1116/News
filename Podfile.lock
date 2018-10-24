@@ -62,6 +62,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - SGPagingView
+  - SnapKit
   - SQLite.swift
   - SVProgressHUD
   - SwiftTheme
@@ -115,6 +116,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
 
-PODFILE CHECKSUM: 1996a85f143eccef125292fb2794e5c99cfb530d
+PODFILE CHECKSUM: 779e9146a4bea7a66525c1616401a58b3b6d7803
 
 COCOAPODS: 1.5.3
