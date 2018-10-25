@@ -22,5 +22,6 @@ target 'News' do
   pod 'Texture'
   pod 'lottie-ios'
   pod 'SnapKit'
+  pod 'IQKeyboardManagerSwift'
 
 end

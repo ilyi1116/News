@@ -10,6 +10,7 @@ PODS:
   - FDFullscreenPopGesture (1.1)
   - HandyJSON (4.1.1)
   - IBAnimatable (5.1.0)
+  - IQKeyboardManagerSwift (6.2.0)
   - Kingfisher (4.8.0)
   - lottie-ios (2.5.0)
   - MJRefresh (3.1.15.3)
@@ -56,6 +57,7 @@ DEPENDENCIES:
   - FDFullscreenPopGesture
   - HandyJSON (~> 4.1.1)
   - IBAnimatable
+  - IQKeyboardManagerSwift
   - Kingfisher
   - lottie-ios
   - MJRefresh
@@ -76,6 +78,7 @@ SPEC REPOS:
     - FDFullscreenPopGesture
     - HandyJSON
     - IBAnimatable
+    - IQKeyboardManagerSwift
     - Kingfisher
     - lottie-ios
     - MJRefresh
@@ -99,6 +102,7 @@ SPEC CHECKSUMS:
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
   HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
   IBAnimatable: dd81f8f22e9982b05e8ac50794e4c8988cc300f2
+  IQKeyboardManagerSwift: b07ccf9d8cafe993dcd6cb794eb4ba34611a0c4e
   Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
@@ -116,6 +120,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   Texture: 9d7e38965cf22ccd7cd9c249dd78b3f14e70ab6c
 
-PODFILE CHECKSUM: 779e9146a4bea7a66525c1616401a58b3b6d7803
+PODFILE CHECKSUM: 728bd04b3d7ba35e51a7ff1fa2d6c8fa91c67c49
 
 COCOAPODS: 1.5.3
