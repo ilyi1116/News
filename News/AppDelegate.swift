@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftTheme
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = DQTabBarVC()
         window?.makeKeyAndVisible()
+        
+        IQKeyboardManager.shared.enable = true
+        // 点击背景收起键盘
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
         return true
     }

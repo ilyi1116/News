@@ -10,6 +10,7 @@
 		31216FAA7A67909657B7154E /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5131B987FDBA155D61825F /* Pods_News.framework */; };
 		AD2412FF2175D505002A37C3 /* NoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */; };
 		AD2413012175D539002A37C3 /* NoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */; };
+		AD601F9221816A3B0001C036 /* DQMoreLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */; };
 		AD6A1D5521742766009D8E35 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D5421742766009D8E35 /* API.swift */; };
 		AD6A1D572174328B009D8E35 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D562174328B009D8E35 /* MyCellModel.swift */; };
 		AD6A1D5A21743BAF009D8E35 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D5821743BAF009D8E35 /* MineCell.swift */; };
@@ -64,6 +65,7 @@
 		8EC23DCDED9565E1780AB51F /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
 		AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLoginHeaderView.swift; sourceTree = "<group>"; };
 		AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoLoginHeaderView.xib; sourceTree = "<group>"; };
+		AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQMoreLoginVC.swift; sourceTree = "<group>"; };
 		AD6A1D5421742766009D8E35 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		AD6A1D562174328B009D8E35 /* MyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		AD6A1D5821743BAF009D8E35 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7C5DD0216F42EB00FC9B43 /* DQMineVC.swift */,
+				AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				AD7A56AA21708F4600F08FD5 /* NetworkTool.swift in Sources */,
 				AD6A1D572174328B009D8E35 /* MyCellModel.swift in Sources */,
 				AD6A1D6121746D42009D8E35 /* UIView+extension.swift in Sources */,
+				AD601F9221816A3B0001C036 /* DQMoreLoginVC.swift in Sources */,
 				AD6A1D682174837D009D8E35 /* MyfollowCollectionCell.swift in Sources */,
 				AD6A1D5E217467C6009D8E35 /* MineFirstSectionCell.swift in Sources */,
 				AD7C5DD9216F42EB00FC9B43 /* DQHuoshanVC.swift in Sources */,

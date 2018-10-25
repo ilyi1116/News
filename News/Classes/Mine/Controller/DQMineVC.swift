@@ -67,12 +67,22 @@ class DQMineVC: UITableViewController {
                 self.tableView.reloadSections(indexSet, with: .automatic)
             }
         }
+        
+        // 给更多登录方式按钮添加点击事件
+        headerView.btnMore.addTarget(self, action: #selector(btnMore_Click), for: .touchUpInside)
     }
     
     fileprivate lazy var headerView: NoLoginHeaderView = {
         let headerView = NoLoginHeaderView.headerView()
         return headerView
     }()
+    
+    // 事件
+    @objc func btnMore_Click() {
+        let loginVC = DQMoreLoginVC()
+        present(loginVC, animated:true, completion: nil)
+    }
+    
 
 }
 
