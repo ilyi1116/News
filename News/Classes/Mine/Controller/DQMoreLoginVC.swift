@@ -10,15 +10,40 @@ import UIKit
 import SnapKit
 
 class DQMoreLoginVC: UIViewController {
-
+    
+    private let btnW = (SCREEN_WIDTH-60)/4
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         view.backgroundColor = UIColor.white
         
         // 关闭按钮
+        view.addSubview(btnClose)
+        view.addSubview(lblTip)
+        view.addSubview(viewPhone)
+        viewPhone.addSubview(btnGetCode)
+        viewPhone.addSubview(viewLine)
+        viewPhone.addSubview(txtPhone)
+        view.addSubview(viewCode)
+        viewCode.addSubview(btnFindPassword)
+        viewCode.addSubview(viewLine2)
+        viewCode.addSubview(txtCode)
+        view.addSubview(lblTip2)
+        view.addSubview(gotoBtn)
+        view.addSubview(btnCheckBox)
+        view.addSubview(lblTip3)
+        view.addSubview(btnLoginWithPassword)
+        // 第三方登录方式
+        view.addSubview(btnWechat)
+        view.addSubview(btnQQ)
+        view.addSubview(btnTianyi)
+        view.addSubview(btnEmail)
+        
+    }
+    
+    // 懒加载控件
+    lazy var btnClose: UIButton = {
         let btnClose = UIButton()
         view.addSubview(btnClose)
         btnClose.snp.makeConstraints { (make) -> Void in
@@ -28,7 +53,11 @@ class DQMoreLoginVC: UIViewController {
         }
         btnClose.setImage(UIImage(named: "close_sdk_login_14x14_"), for: .normal)
         btnClose.addTarget(self, action: #selector(btnClose_Click), for: .touchUpInside)
-        
+        return btnClose
+    }()
+    
+    // 提示登录你的头条
+    lazy var lblTip: UILabel = {
         // 提示 登录你的头条，精彩用不丢失
         let lblTip = UILabel()
         view.addSubview(lblTip)
@@ -39,8 +68,12 @@ class DQMoreLoginVC: UIViewController {
         lblTip.text = "登录你的头条,精彩永不丢失"
         lblTip.textColor = UIColor.black
         lblTip.font = UIFont.systemFont(ofSize: 16)
-        
-        // 手机号
+        return lblTip
+    }()
+    
+    
+    // 手机号view
+    lazy var viewPhone: UIView = {
         let viewPhone = UIView()
         view.addSubview(viewPhone)
         viewPhone.snp.makeConstraints { (make) -> Void in
@@ -53,8 +86,11 @@ class DQMoreLoginVC: UIViewController {
         viewPhone.layer.borderColor = UIColor.lightGray.cgColor
         viewPhone.layer.cornerRadius = 25;
         viewPhone.layer.masksToBounds = true
-        
-        // 发送验证码
+        return viewPhone
+    }()
+    
+    // 发送验证码
+    lazy var btnGetCode: UIButton = {
         let btnGetCode = UIButton()
         viewPhone.addSubview(btnGetCode)
         btnGetCode.snp.makeConstraints { (make) -> Void in
@@ -67,8 +103,11 @@ class DQMoreLoginVC: UIViewController {
         btnGetCode.setTitleColor(UIColor.black, for: .normal)
         btnGetCode.titleLabel?.font = UIFont.systemFont(ofSize: 13)
         btnGetCode.addTarget(self, action: #selector(btnGetCode_Click), for: .touchUpInside)
-        
-        // 竖线
+        return btnGetCode
+    }()
+    
+    // 竖线
+    lazy var viewLine: UIView = {
         let viewLine = UIView()
         viewPhone.addSubview(viewLine)
         viewLine.snp.makeConstraints { (make) -> Void in
@@ -78,8 +117,11 @@ class DQMoreLoginVC: UIViewController {
             make.height.equalTo(35)
         }
         viewLine.backgroundColor = UIColor.lightGray
-        
-        // 输入框
+        return viewLine
+    }()
+    
+    // 输入框
+    lazy var txtPhone: UITextField = {
         let txtPhone = UITextField()
         viewPhone.addSubview(txtPhone)
         txtPhone.snp.makeConstraints { (make) -> Void in
@@ -90,8 +132,11 @@ class DQMoreLoginVC: UIViewController {
         }
         txtPhone.keyboardType = .numberPad
         txtPhone.placeholder = "手机号"
-        
-        // 验证码
+        return txtPhone
+    }()
+    
+    // 验证码view
+    lazy var viewCode: UIView = {
         let viewCode = UIView()
         view.addSubview(viewCode)
         viewCode.snp.makeConstraints { (make) -> Void in
@@ -104,20 +149,57 @@ class DQMoreLoginVC: UIViewController {
         viewCode.layer.borderColor = UIColor.lightGray.cgColor
         viewCode.layer.cornerRadius = 25
         viewCode.layer.masksToBounds = true
-        
-        // txtCode
+        return viewCode
+    }()
+    
+    // 找回密码按钮
+    lazy var btnFindPassword: UIButton = {
+        let btnFindPassword = UIButton()
+        viewCode.addSubview(btnFindPassword)
+        btnFindPassword.snp.makeConstraints { (make) -> Void in
+            make.centerY.equalTo(viewCode)
+            make.right.equalTo(viewCode)
+            make.width.equalTo(100)
+            make.height.equalTo(45)
+        }
+        btnFindPassword.setTitle("找回密码", for: .normal)
+        btnFindPassword.setTitleColor(UIColor.black, for: .normal)
+        btnFindPassword.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        btnFindPassword.addTarget(self, action: #selector(btnFindPassword_Click), for: .touchUpInside)
+        return btnFindPassword
+    }()
+    
+    // 竖线view2
+    lazy var viewLine2: UIView = {
+        let viewLine2 = UIView()
+        viewCode.addSubview(viewLine2)
+        viewLine2.snp.makeConstraints { (make) -> Void in
+            make.centerY.equalTo(viewCode)
+            make.right.equalTo(btnFindPassword.snp.left)
+            make.width.equalTo(1)
+            make.height.equalTo(35)
+        }
+        viewLine2.backgroundColor = UIColor.lightGray
+        return viewLine2
+    }()
+    
+    // 验证码
+    lazy var txtCode: UITextField = {
         let txtCode = UITextField()
         viewCode.addSubview(txtCode)
         txtCode.snp.makeConstraints { (make) -> Void in
             make.centerY.equalTo(viewCode)
             make.left.equalTo(viewCode).offset(10)
-            make.width.equalTo(250)
+            make.right.equalTo(viewLine2.snp.left)
             make.height.equalTo(45)
         }
         txtCode.keyboardType = .numberPad
         txtCode.placeholder = "请输入验证码"
-        
-        // 未注册手机验证后自动登录
+        return txtCode
+    }()
+    
+    // 未注册手机验证后自动登录
+    lazy var lblTip2: UILabel = {
         let lblTip2 = UILabel()
         view.addSubview(lblTip2)
         lblTip2.snp.makeConstraints { (make) -> Void in
@@ -127,8 +209,11 @@ class DQMoreLoginVC: UIViewController {
         lblTip2.text = "未注册手机验证后自动登录"
         lblTip2.font = UIFont.systemFont(ofSize: 12)
         lblTip2.textColor = UIColor.black
-        
-        // 进入头条按钮
+        return lblTip2
+    }()
+    
+    // 进入头条
+    lazy var gotoBtn: UIButton = {
         let gotoBtn = UIButton()
         view.addSubview(gotoBtn)
         gotoBtn.snp.makeConstraints { (make) -> Void in
@@ -144,9 +229,11 @@ class DQMoreLoginVC: UIViewController {
         gotoBtn.layer.cornerRadius = 25
         gotoBtn.layer.masksToBounds = true
         gotoBtn.addTarget(self, action: #selector(gotoBtn_Click), for: .touchUpInside)
-        
-        
-        // CheckBox
+        return gotoBtn
+    }()
+    
+    // btnCheckBox
+    lazy var btnCheckBox: UIButton = {
         let btnCheckBox = UIButton()
         view.addSubview(btnCheckBox)
         btnCheckBox.snp.makeConstraints { (make) -> Void in
@@ -159,8 +246,11 @@ class DQMoreLoginVC: UIViewController {
         btnCheckBox.setImage(UIImage(named: "details_choose_icon_night_15x15_"), for: .normal)
         btnCheckBox.addTarget(self, action: #selector(btnCheckBox_Click), for: .touchUpInside)
         btnCheckBox.isSelected = true
-        
-        // 我已阅读并同意"用户协议和隐私条款"
+        return btnCheckBox
+    }()
+    
+    // 我已阅读并同意"用户协议和隐私条款"
+    lazy var lblTip3: UILabel = {
         let lblTip3 = UILabel()
         view.addSubview(lblTip3)
         lblTip3.snp.makeConstraints { (make) -> Void in
@@ -170,8 +260,11 @@ class DQMoreLoginVC: UIViewController {
         lblTip3.text = "我已阅读并同意\"用户协议和隐私条款\""
         lblTip3.textColor = UIColor.black
         lblTip3.font = UIFont.systemFont(ofSize: 14)
-        
-        // 账号密码登录
+        return lblTip3
+    }()
+    
+    // 账号密码登录
+    lazy var btnLoginWithPassword: UIButton = {
         let btnLoginWithPassword = UIButton()
         view.addSubview(btnLoginWithPassword)
         btnLoginWithPassword.snp.makeConstraints { (make) -> Void in
@@ -184,23 +277,25 @@ class DQMoreLoginVC: UIViewController {
         btnLoginWithPassword.setTitleColor(UIColor.blue, for: .normal)
         btnLoginWithPassword.titleLabel?.font = UIFont.systemFont(ofSize: 16)
         btnLoginWithPassword.addTarget(self, action: #selector(btnLoginWithPassword_Click), for: .touchUpInside)
-        
-        
-        // 第三方登录方式
-        let btnW = (SCREEN_WIDTH-60)/4
-        
-        // 1.微信
+        return btnLoginWithPassword
+    }()
+    
+    /****第三方登录*****/
+    lazy var btnWechat: UIButton = {
         let btnWechat = UIButton()
         view.addSubview(btnWechat)
         btnWechat.snp.makeConstraints { (make) -> Void in
-            make.bottom.equalTo(view).offset(-30)
-            make.left.equalTo(view).offset(30)
-            make.width.equalTo(btnW)
-            make.height.equalTo(btnW)
+        make.bottom.equalTo(view).offset(-30)
+        make.left.equalTo(view).offset(30)
+        make.width.equalTo(btnW)
+        make.height.equalTo(btnW)
         }
         btnWechat.setImage(UIImage(named: "weixin_sdk_login_40x40_"), for: .normal)
         btnWechat.addTarget(self, action: #selector(btnWechat_Click), for: .touchUpInside)
-        
+        return btnWechat
+    }()
+    
+    lazy var btnQQ: UIButton = {
         let btnQQ = UIButton()
         view.addSubview(btnQQ)
         btnQQ.snp.makeConstraints { (make) -> Void in
@@ -211,7 +306,10 @@ class DQMoreLoginVC: UIViewController {
         }
         btnQQ.setImage(UIImage(named: "qq_sdk_login_40x40_"), for: .normal)
         btnQQ.addTarget(self, action: #selector(btnQQ_Click), for: .touchUpInside)
-        
+        return btnQQ
+    }()
+    
+    lazy var btnTianyi: UIButton = {
         let btnTianyi = UIButton()
         view.addSubview(btnTianyi)
         btnTianyi.snp.makeConstraints { (make) -> Void in
@@ -222,7 +320,10 @@ class DQMoreLoginVC: UIViewController {
         }
         btnTianyi.setImage(UIImage(named: "tianyi_sdk_login_40x40_"), for: .normal)
         btnTianyi.addTarget(self, action: #selector(btnTianyi_Click), for: .touchUpInside)
-        
+        return btnTianyi
+    }()
+    
+    lazy var btnEmail: UIButton = {
         let btnEmail = UIButton()
         view.addSubview(btnEmail)
         btnEmail.snp.makeConstraints { (make) -> Void in
@@ -233,7 +334,11 @@ class DQMoreLoginVC: UIViewController {
         }
         btnEmail.setImage(UIImage(named: "mailbox_sdk_login_40x40_"), for: .normal)
         btnEmail.addTarget(self, action: #selector(btnEmail_Click), for: .touchUpInside)
-    }
+        return btnEmail
+    }()
+    
+
+   
     
     // 事件
     @objc func btnClose_Click() {
@@ -243,6 +348,11 @@ class DQMoreLoginVC: UIViewController {
     // 发送验证码
     @objc func btnGetCode_Click() {
         print("发送验证码")
+    }
+    
+    // 找回密码
+    @objc func btnFindPassword_Click() {
+        print("找回密码")
     }
     
     // 进入头条
@@ -279,6 +389,8 @@ class DQMoreLoginVC: UIViewController {
     @objc func btnEmail_Click() {
         print("邮箱登录")
     }
+    
+    
 
     
 }
