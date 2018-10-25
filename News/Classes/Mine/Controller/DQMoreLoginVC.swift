@@ -117,6 +117,7 @@ class DQMoreLoginVC: UIViewController {
             make.height.equalTo(35)
         }
         viewLine.backgroundColor = UIColor.lightGray
+        viewLine.isHidden = false
         return viewLine
     }()
     
@@ -165,6 +166,7 @@ class DQMoreLoginVC: UIViewController {
         btnFindPassword.setTitle("找回密码", for: .normal)
         btnFindPassword.setTitleColor(UIColor.black, for: .normal)
         btnFindPassword.titleLabel?.font = UIFont.systemFont(ofSize: 13)
+        btnFindPassword.isHidden = true
         btnFindPassword.addTarget(self, action: #selector(btnFindPassword_Click), for: .touchUpInside)
         return btnFindPassword
     }()
@@ -180,6 +182,7 @@ class DQMoreLoginVC: UIViewController {
             make.height.equalTo(35)
         }
         viewLine2.backgroundColor = UIColor.lightGray
+        viewLine2.isHidden = true
         return viewLine2
     }()
     
@@ -366,8 +369,20 @@ class DQMoreLoginVC: UIViewController {
     }
     
     // 账号密码登录
-    @objc func btnLoginWithPassword_Click() {
+    @objc func btnLoginWithPassword_Click(sender: UIButton) {
         print("账号密码登录")
+        btnLoginWithPassword.isSelected = !sender.isSelected
+        if sender.isSelected {
+            viewLine.isHidden = true
+        }else {
+            viewLine.isHidden = false
+        }
+        btnGetCode.isHidden = sender.isSelected
+        btnFindPassword.isHidden = !sender.isSelected
+        viewLine2.isHidden = !sender.isSelected
+        lblTip2.isHidden = sender.isSelected
+        txtCode.placeholder = sender.isSelected ? "密码" : "请输入验证码"
+        lblTip.text = sender.isSelected ? "账号密码登录" : "登录你的头条,精彩永不丢失"
     }
     
     // 微信登录
