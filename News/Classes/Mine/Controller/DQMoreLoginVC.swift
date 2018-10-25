@@ -374,8 +374,11 @@ class DQMoreLoginVC: UIViewController {
         btnLoginWithPassword.isSelected = !sender.isSelected
         if sender.isSelected {
             viewLine.isHidden = true
+            // 如果按钮选中的话 改变密码框的样式
+            txtCode.isSecureTextEntry = true
         }else {
             viewLine.isHidden = false
+            txtCode.isSecureTextEntry = false
         }
         btnGetCode.isHidden = sender.isSelected
         btnFindPassword.isHidden = !sender.isSelected
