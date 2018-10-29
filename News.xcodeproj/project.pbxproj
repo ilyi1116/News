@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		31216FAA7A67909657B7154E /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB5131B987FDBA155D61825F /* Pods_News.framework */; };
+		AD015E7B2182EB0900D75B87 /* DQSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */; };
+		AD015E7D2182EEDD00D75B87 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD015E7C2182EEDD00D75B87 /* Settings.plist */; };
+		AD015E802182F4A800D75B87 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015E7F2182F4A800D75B87 /* SettingModel.swift */; };
 		AD2412FF2175D505002A37C3 /* NoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */; };
 		AD2413012175D539002A37C3 /* NoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */; };
 		AD601F9221816A3B0001C036 /* DQMoreLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */; };
+		AD65D94C2186F8E100F59AF4 /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD65D94B2186F8E100F59AF4 /* SettingCell.swift */; };
 		AD6A1D5521742766009D8E35 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D5421742766009D8E35 /* API.swift */; };
 		AD6A1D572174328B009D8E35 /* MyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D562174328B009D8E35 /* MyCellModel.swift */; };
 		AD6A1D5A21743BAF009D8E35 /* MineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6A1D5821743BAF009D8E35 /* MineCell.swift */; };
@@ -63,9 +67,13 @@
 /* Begin PBXFileReference section */
 		3EE15182970C21ED47A7BE83 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 		8EC23DCDED9565E1780AB51F /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Pods/Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQSettingVC.swift; sourceTree = "<group>"; };
+		AD015E7C2182EEDD00D75B87 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		AD015E7F2182F4A800D75B87 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLoginHeaderView.swift; sourceTree = "<group>"; };
 		AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoLoginHeaderView.xib; sourceTree = "<group>"; };
 		AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQMoreLoginVC.swift; sourceTree = "<group>"; };
+		AD65D94B2186F8E100F59AF4 /* SettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
 		AD6A1D5421742766009D8E35 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		AD6A1D562174328B009D8E35 /* MyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellModel.swift; sourceTree = "<group>"; };
 		AD6A1D5821743BAF009D8E35 /* MineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineCell.swift; sourceTree = "<group>"; };
@@ -137,6 +145,14 @@
 				EB5131B987FDBA155D61825F /* Pods_News.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD015E7E2182F49700D75B87 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD015E7F2182F4A800D75B87 /* SettingModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AD7A56A821708F2900F08FD5 /* Tools */ = {
@@ -227,7 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				AD7C5DCF216F42EB00FC9B43 /* Controller */,
-				AD7C5DD1216F42EB00FC9B43 /* Model */,
+				AD015E7E2182F49700D75B87 /* Model */,
 				AD7C5DD2216F42EB00FC9B43 /* View */,
 			);
 			path = Mine;
@@ -238,15 +254,9 @@
 			children = (
 				AD7C5DD0216F42EB00FC9B43 /* DQMineVC.swift */,
 				AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */,
+				AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		AD7C5DD1216F42EB00FC9B43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		AD7C5DD2216F42EB00FC9B43 /* View */ = {
@@ -260,6 +270,7 @@
 				AD6A1D672174837D009D8E35 /* MyfollowCollectionCell.xib */,
 				AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */,
 				AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */,
+				AD65D94B2186F8E100F59AF4 /* SettingCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -356,6 +367,7 @@
 				ADBB3547216DCE7B00CA492B /* Info.plist */,
 				AD8C81BE21800F27009C3756 /* DefaultTheme.plist */,
 				AD8C81C021800F38009C3756 /* NightTheme.plist */,
+				AD015E7C2182EEDD00D75B87 /* Settings.plist */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -502,6 +514,7 @@
 				AD6A1D5F217467C6009D8E35 /* MineFirstSectionCell.xib in Resources */,
 				ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */,
 				AD2413012175D539002A37C3 /* NoLoginHeaderView.xib in Resources */,
+				AD015E7D2182EEDD00D75B87 /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,13 +632,16 @@
 				AD2412FF2175D505002A37C3 /* NoLoginHeaderView.swift in Sources */,
 				AD6A1D6321746E56009D8E35 /* UITableView+Extension.swift in Sources */,
 				AD7C5DC2216F3BB100FC9B43 /* DQTabBar.swift in Sources */,
+				AD015E7B2182EB0900D75B87 /* DQSettingVC.swift in Sources */,
 				AD7C5DDA216F42EB00FC9B43 /* DQMineVC.swift in Sources */,
 				ADBB356C216DD0A900CA492B /* DQNavigationVC.swift in Sources */,
 				ADBB356A216DD07F00CA492B /* DQTabBarVC.swift in Sources */,
 				ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */,
 				AD7C5DDB216F42EB00FC9B43 /* DQVideoVC.swift in Sources */,
+				AD65D94C2186F8E100F59AF4 /* SettingCell.swift in Sources */,
 				AD6A1D5A21743BAF009D8E35 /* MineCell.swift in Sources */,
 				AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */,
+				AD015E802182F4A800D75B87 /* SettingModel.swift in Sources */,
 				AD6A1D5521742766009D8E35 /* API.swift in Sources */,
 				AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */,
 				AD8C81BD21800E44009C3756 /* ThemeTool.swift in Sources */,

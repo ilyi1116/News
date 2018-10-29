@@ -11,6 +11,7 @@ import SnapKit
 
 class DQMoreLoginVC: UIViewController {
     
+    // 按钮的宽度
     private let btnW = (SCREEN_WIDTH-60)/4
     
     override func viewDidLoad() {
@@ -39,6 +40,9 @@ class DQMoreLoginVC: UIViewController {
         view.addSubview(btnQQ)
         view.addSubview(btnTianyi)
         view.addSubview(btnEmail)
+        
+        // 这里可以设置主题
+        view.theme_backgroundColor = "colors.cellBackgroundColor"
         
     }
     

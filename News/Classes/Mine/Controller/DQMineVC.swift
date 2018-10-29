@@ -89,7 +89,7 @@ class DQMineVC: UITableViewController {
 // 实现tableview的数据源方法和代理方法
 extension DQMineVC{
     
-    // 一共有多少组
+    // 一共有多少组 这里分了四组
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sectionArray.count
     }
@@ -153,6 +153,15 @@ extension DQMineVC{
         let view = UIView(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 10))
         view.backgroundColor = UIColor.globalBackgroundColor()
         return view
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 {
+            if indexPath.row == 1 {
+                let settingVC = DQSettingVC()
+                navigationController?.pushViewController(settingVC, animated: true)
+            }
+        }
     }
 
     // 向下拉头部 黏住顶部

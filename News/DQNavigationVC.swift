@@ -15,21 +15,20 @@ class DQNavigationVC: UINavigationController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    // 重写pushViewController 方法 在这里处理返回按钮的样式
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        
+        if viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true;
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "lefterbackicon_titlebar_24x24_"), style: .plain, target: self, action: #selector(back_click))
+        }
+        
+        super.pushViewController(viewController, animated: animated)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc private func back_click() {
+        popViewController(animated: true)
     }
-    */
 
 }
