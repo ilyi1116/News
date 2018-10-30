@@ -145,7 +145,7 @@
 			<key>isHiddenSubTitle</key>
 			<true/>
 			<key>isHiddenRightArrow</key>
-			<false/>
+			<true/>
 			<key>isHiddenSwitch</key>
 			<true/>
 		</dict>

@@ -4,6 +4,8 @@
 <dict>
 	<key>colors</key>
 	<dict>
+		<key>navigationBarTintColor</key>
+		<string>#707070</string>
 		<key>tabbarTintColor</key>
 		<string>#925657</string>
 		<key>separatorColor</key>

@@ -19,3 +19,12 @@ let isNight = "isNight"
 // 通知名称
 let DayOrNightButtonClicked = "DayOrNightButtonClicked"
 
+// 计算缓存通知的名称
+let CalculateCashSizeName = "CalculateCashSizeName"
+
+// 设置字体大小的通知的名称
+let SetupFontSizeName = "SetupFontSizeName"
+
+// 非 WiFi 网络下载图片通知名称
+let NetWorkModeName = "NetWorkModeName"
+

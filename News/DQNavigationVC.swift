@@ -14,6 +14,11 @@ class DQNavigationVC: UINavigationController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        // 设置主题
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.theme_barTintColor = "colors.cellBackgroundColor"
+        navigationBar.theme_tintColor = "colors.navigationBarTintColor"
     }
     
     // 重写pushViewController 方法 在这里处理返回按钮的样式
