@@ -79,11 +79,9 @@ class DQSettingVC: UITableViewController {
                     cell.selectionStyle = .none
                 case 3: // 非 WiFi 网络流量
                     NotificationCenter.default.addObserver(self, selector: #selector(loadNetworkMode), name: NSNotification.Name(rawValue: NetWorkModeName), object: nil)
-            default:
-                break
+                default: break
             }
-        default:
-            break
+        default: break
         }
         
         return cell
@@ -116,6 +114,11 @@ class DQSettingVC: UITableViewController {
                 break
             }
         
+    }
+    
+    // 移除通知
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
 
