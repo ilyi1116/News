@@ -40,6 +40,8 @@
 		AD8C81C121800F38009C3756 /* NightTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8C81C021800F38009C3756 /* NightTheme.plist */; };
 		ADB56565218949FA001D4B10 /* OfflinedownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB56564218949FA001D4B10 /* OfflinedownloadCell.swift */; };
 		ADB5656B21894FF3001D4B10 /* OfflineDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5656A21894FF3001D4B10 /* OfflineDownloadModel.swift */; };
+		ADB5656D218970DC001D4B10 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB5656C218970DC001D4B10 /* libsqlite3.0.tbd */; };
+		ADB5656F218970F2001D4B10 /* SqliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5656E218970F2001D4B10 /* SqliteManager.swift */; };
 		ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB353B216DCE7000CA492B /* AppDelegate.swift */; };
 		ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBB353F216DCE7000CA492B /* Main.storyboard */; };
 		ADBB3543216DCE7B00CA492B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBB3542216DCE7B00CA492B /* Assets.xcassets */; };
@@ -102,6 +104,8 @@
 		AD8C81C021800F38009C3756 /* NightTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NightTheme.plist; sourceTree = "<group>"; };
 		ADB56564218949FA001D4B10 /* OfflinedownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflinedownloadCell.swift; sourceTree = "<group>"; };
 		ADB5656A21894FF3001D4B10 /* OfflineDownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadModel.swift; sourceTree = "<group>"; };
+		ADB5656C218970DC001D4B10 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		ADB5656E218970F2001D4B10 /* SqliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteManager.swift; sourceTree = "<group>"; };
 		ADBB3538216DCE7000CA492B /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBB353B216DCE7000CA492B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBB3540216DCE7000CA492B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADB5656D218970DC001D4B10 /* libsqlite3.0.tbd in Frameworks */,
 				31216FAA7A67909657B7154E /* Pods_News.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +153,7 @@
 		69B1B6AF84BE68E13C288EA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ADB5656C218970DC001D4B10 /* libsqlite3.0.tbd */,
 				EB5131B987FDBA155D61825F /* Pods_News.framework */,
 			);
 			name = Frameworks;
@@ -166,6 +172,7 @@
 			children = (
 				AD7A56A921708F4600F08FD5 /* NetworkTool.swift */,
 				AD8C81BC21800E44009C3756 /* ThemeTool.swift */,
+				ADB5656E218970F2001D4B10 /* SqliteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -630,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD6A1D652174702C009D8E35 /* UICollectionView+Extension.swift in Sources */,
+				ADB5656F218970F2001D4B10 /* SqliteManager.swift in Sources */,
 				AD7A56AA21708F4600F08FD5 /* NetworkTool.swift in Sources */,
 				AD6A1D572174328B009D8E35 /* MyCellModel.swift in Sources */,
 				AD6A1D6121746D42009D8E35 /* UIView+extension.swift in Sources */,

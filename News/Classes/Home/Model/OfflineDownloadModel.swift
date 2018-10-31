@@ -19,4 +19,7 @@ struct OfflineDownloadModel: HandyJSON {
     var concern_id: String = ""
     var type: Int = 0
     var icon_url: String = ""
+    
+    // 新增属性 判断是否选择
+    var selected: Bool = true
 }

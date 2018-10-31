@@ -17,7 +17,9 @@ class DQOfflineDownloadVC: UITableViewController {
     }
     
     // 定义一个数组来接收数据
-    var offlineDownloadModels = [OfflineDownloadModel]()
+    fileprivate var offlineDownloadModels = [OfflineDownloadModel]()
+    // 定义一个表
+    fileprivate let offlineDownloadTable = OfflineDownloadTable()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,10 +28,13 @@ class DQOfflineDownloadVC: UITableViewController {
         tableView.register(OfflinedownloadCell.self, forCellReuseIdentifier: "OfflinedownloadCell")
         
         // 获取数据
-        NetworkTool.loadHomeNewsData { (offlineDownloadModels) in
-            self.offlineDownloadModels = offlineDownloadModels
-            self.tableView .reloadData()
-        }
+//        NetworkTool.loadHomeNewsData { (offlineDownloadModels) in
+//            self.offlineDownloadModels = offlineDownloadModels
+//            self.tableView .reloadData()
+//        }
+        
+        // 从数据库中读取数据
+        offlineDownloadModels = offlineDownloadTable.selectAll()
     }
 
 
@@ -44,6 +49,7 @@ class DQOfflineDownloadVC: UITableViewController {
         cell.offlineDownloadModel = offlineDownloadModel
         // 取消cell 的点击
         cell.selectionStyle = .none
+        cell.imgIcon.image = offlineDownloadModel.selected ? UIImage(named: "air_download_option_press_20x20_") : UIImage(named: "air_download_option_20x20_")
         return cell
     }
     
@@ -64,6 +70,20 @@ class DQOfflineDownloadVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 44
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        var offlineModel = offlineDownloadModels[indexPath.row]
+        offlineModel.selected = !offlineModel.selected
+        let cell = tableView.cellForRow(at: indexPath) as! OfflinedownloadCell
+        cell.imgIcon.image = offlineModel.selected ? UIImage(named: "air_download_option_press_20x20_") : UIImage(named: "air_download_option_20x20_")
+        offlineDownloadModels[indexPath.row] = offlineModel
+        
+        // 更新数据库中的数据
+        offlineDownloadTable.update(offlineModel)
+        // 刷新表格
+        tableView.reloadRows(at: [indexPath], with: .none)
+        
     }
 
     
