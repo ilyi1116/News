@@ -110,6 +110,14 @@ class DQSettingVC: UITableViewController {
                         networkMode()
                     default: break
                 }
+            case 1:
+                switch indexPath.row {
+                    case 0: // 离线下载
+                    let offlineDownloadVC = DQOfflineDownloadVC()
+                    navigationController?.pushViewController(offlineDownloadVC, animated: true)
+                    
+                    default: break
+                }
             default:
                 break
             }

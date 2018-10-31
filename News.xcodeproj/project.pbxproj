@@ -11,6 +11,7 @@
 		AD015E7B2182EB0900D75B87 /* DQSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */; };
 		AD015E7D2182EEDD00D75B87 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD015E7C2182EEDD00D75B87 /* Settings.plist */; };
 		AD015E802182F4A800D75B87 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD015E7F2182F4A800D75B87 /* SettingModel.swift */; };
+		AD18744A2189469B000E8E14 /* DQOfflineDownloadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1874492189469B000E8E14 /* DQOfflineDownloadVC.swift */; };
 		AD2412FF2175D505002A37C3 /* NoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */; };
 		AD2413012175D539002A37C3 /* NoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */; };
 		AD601F9221816A3B0001C036 /* DQMoreLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */; };
@@ -37,6 +38,8 @@
 		AD8C81BD21800E44009C3756 /* ThemeTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8C81BC21800E44009C3756 /* ThemeTool.swift */; };
 		AD8C81BF21800F27009C3756 /* DefaultTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8C81BE21800F27009C3756 /* DefaultTheme.plist */; };
 		AD8C81C121800F38009C3756 /* NightTheme.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD8C81C021800F38009C3756 /* NightTheme.plist */; };
+		ADB56565218949FA001D4B10 /* OfflinedownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB56564218949FA001D4B10 /* OfflinedownloadCell.swift */; };
+		ADB5656B21894FF3001D4B10 /* OfflineDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5656A21894FF3001D4B10 /* OfflineDownloadModel.swift */; };
 		ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADBB353B216DCE7000CA492B /* AppDelegate.swift */; };
 		ADBB3541216DCE7000CA492B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADBB353F216DCE7000CA492B /* Main.storyboard */; };
 		ADBB3543216DCE7B00CA492B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADBB3542216DCE7B00CA492B /* Assets.xcassets */; };
@@ -70,6 +73,7 @@
 		AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQSettingVC.swift; sourceTree = "<group>"; };
 		AD015E7C2182EEDD00D75B87 /* Settings.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		AD015E7F2182F4A800D75B87 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
+		AD1874492189469B000E8E14 /* DQOfflineDownloadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQOfflineDownloadVC.swift; sourceTree = "<group>"; };
 		AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoLoginHeaderView.swift; sourceTree = "<group>"; };
 		AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoLoginHeaderView.xib; sourceTree = "<group>"; };
 		AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DQMoreLoginVC.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		AD8C81BC21800E44009C3756 /* ThemeTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeTool.swift; sourceTree = "<group>"; };
 		AD8C81BE21800F27009C3756 /* DefaultTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DefaultTheme.plist; sourceTree = "<group>"; };
 		AD8C81C021800F38009C3756 /* NightTheme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NightTheme.plist; sourceTree = "<group>"; };
+		ADB56564218949FA001D4B10 /* OfflinedownloadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflinedownloadCell.swift; sourceTree = "<group>"; };
+		ADB5656A21894FF3001D4B10 /* OfflineDownloadModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDownloadModel.swift; sourceTree = "<group>"; };
 		ADBB3538216DCE7000CA492B /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADBB353B216DCE7000CA492B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADBB3540216DCE7000CA492B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -179,8 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				AD7C5DC5216F42EB00FC9B43 /* Controller */,
-				AD7C5DC7216F42EB00FC9B43 /* Model */,
-				AD7C5DC8216F42EB00FC9B43 /* View */,
+				ADB5656821894FDB001D4B10 /* Model */,
+				ADB5656921894FDB001D4B10 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -191,20 +197,6 @@
 				AD7C5DC6216F42EB00FC9B43 /* DQHomeVC.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		AD7C5DC7216F42EB00FC9B43 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		AD7C5DC8216F42EB00FC9B43 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		AD7C5DC9216F42EB00FC9B43 /* Huoshan */ = {
@@ -255,6 +247,7 @@
 				AD7C5DD0216F42EB00FC9B43 /* DQMineVC.swift */,
 				AD601F9121816A3B0001C036 /* DQMoreLoginVC.swift */,
 				AD015E7A2182EB0900D75B87 /* DQSettingVC.swift */,
+				AD1874492189469B000E8E14 /* DQOfflineDownloadVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +264,7 @@
 				AD2412FE2175D505002A37C3 /* NoLoginHeaderView.swift */,
 				AD2413002175D539002A37C3 /* NoLoginHeaderView.xib */,
 				AD65D94B2186F8E100F59AF4 /* SettingCell.swift */,
+				ADB56564218949FA001D4B10 /* OfflinedownloadCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -326,6 +320,21 @@
 				AD6A1D642174702C009D8E35 /* UICollectionView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		ADB5656821894FDB001D4B10 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ADB5656A21894FF3001D4B10 /* OfflineDownloadModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADB5656921894FDB001D4B10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		ADBB352F216DCE7000CA492B = {
@@ -625,6 +634,7 @@
 				AD6A1D572174328B009D8E35 /* MyCellModel.swift in Sources */,
 				AD6A1D6121746D42009D8E35 /* UIView+extension.swift in Sources */,
 				AD601F9221816A3B0001C036 /* DQMoreLoginVC.swift in Sources */,
+				ADB56565218949FA001D4B10 /* OfflinedownloadCell.swift in Sources */,
 				AD6A1D682174837D009D8E35 /* MyfollowCollectionCell.swift in Sources */,
 				AD6A1D5E217467C6009D8E35 /* MineFirstSectionCell.swift in Sources */,
 				AD7C5DD9216F42EB00FC9B43 /* DQHuoshanVC.swift in Sources */,
@@ -636,6 +646,7 @@
 				AD7C5DDA216F42EB00FC9B43 /* DQMineVC.swift in Sources */,
 				ADBB356C216DD0A900CA492B /* DQNavigationVC.swift in Sources */,
 				ADBB356A216DD07F00CA492B /* DQTabBarVC.swift in Sources */,
+				ADB5656B21894FF3001D4B10 /* OfflineDownloadModel.swift in Sources */,
 				ADBB353C216DCE7000CA492B /* AppDelegate.swift in Sources */,
 				AD7C5DDB216F42EB00FC9B43 /* DQVideoVC.swift in Sources */,
 				AD65D94C2186F8E100F59AF4 /* SettingCell.swift in Sources */,
@@ -643,6 +654,7 @@
 				AD7C5DDE216F4C7600FC9B43 /* Const.swift in Sources */,
 				AD015E802182F4A800D75B87 /* SettingModel.swift in Sources */,
 				AD6A1D5521742766009D8E35 /* API.swift in Sources */,
+				AD18744A2189469B000E8E14 /* DQOfflineDownloadVC.swift in Sources */,
 				AD7C5DE1216F4E2F00FC9B43 /* UIColor+Extension.swift in Sources */,
 				AD8C81BD21800E44009C3756 /* ThemeTool.swift in Sources */,
 			);
